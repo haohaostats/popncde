@@ -109,7 +109,7 @@ exit()
 
 ## Included demo data
 
-The package contains six static CSV files. No data-generation program is included.
+The package contains six static CSV files.
 
 ```text
 patients.csv
