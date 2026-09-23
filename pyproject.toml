@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "popncde"
-version = "0.1.0"
+version = "0.1.1"
 description = "Population neural controlled differential equations for individualized pharmacokinetic prediction"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -26,8 +26,14 @@ Homepage = "https://github.com/haohaostats/popncde"
 Repository = "https://github.com/haohaostats/popncde"
 Issues = "https://github.com/haohaostats/popncde/issues"
 
+[project.scripts]
+popncde-demo = "popncde.demo:main"
+
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+popncde = ["data/*.csv"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

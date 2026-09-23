@@ -131,7 +131,7 @@ class PopNCDE:
         if not self.fitted:
             raise RuntimeError("model must be fitted before saving")
         payload = {
-            "version": "0.1.0",
+            "version": "0.1.1",
             "config": asdict(self.config),
             "covariate_mean": self.covariate_mean,
             "covariate_sd": self.covariate_sd,
