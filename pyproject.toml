@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "popncde"
+version = "0.1.0"
+description = "Population neural controlled differential equations for individualized pharmacokinetic prediction"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{name = "Pop-NCDE contributors"}]
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.0",
+  "scipy>=1.11",
+  "torch>=2.2",
+  "matplotlib>=3.8"
+]
+
+[project.optional-dependencies]
+dev = ["build>=1.2", "pytest>=8", "ruff>=0.6"]
+
+[project.urls]
+Homepage = "https://github.com/haohaostats/popncde"
+Repository = "https://github.com/haohaostats/popncde"
+Issues = "https://github.com/haohaostats/popncde/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
