@@ -238,8 +238,6 @@ exit()
 
 `python -m popncde.demo` uses a deliberately reduced training configuration so that installation can be checked quickly. The step-by-step workflow uses the default `PopNCDEConfig()` settings. The two runs can therefore produce different predictions and exposure endpoints. This is expected.
 
-The included dataset is intended only to demonstrate software operation. Its results are not the simulation-study results reported in the manuscript and must not be used to assess comparative model performance.
-
 ## Data format for a new study
 
 The package accepts three pandas data frames:
