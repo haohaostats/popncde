@@ -18,7 +18,7 @@ doses:          patient_id, time_h, dose_mg
 concentrations: patient_id, time_h, concentration
 ```
 
-Training data may contain a `split` column with `train` and `validation` values. If it is absent, a patient-level validation split is created.
+Training and validation sets are separated at the patient level. Users may provide this assignment through a `split` column in the patient table. Otherwise, the package randomly assigns 15% of patients to validation using the configured random seed.
 
 ## Usage
 
@@ -41,8 +41,4 @@ prediction.plot()
 prediction.future_endpoints()
 model.save("popncde.pt")
 ```
-
-## Scope
-
-The package contains the Pop-NCDE method and its population pharmacokinetic backbone. It does not contain benchmark models, manuscript figure reproduction, or repeated simulation workflows.
 
