@@ -205,6 +205,33 @@ The prediction table contains:
 
 The endpoint output contains future AUC, future maximum concentration, and the final predose concentration.
 
+Expected prediction output with the included data and default configuration:
+
+```text
+     time_h  population_pk  individualized_prior  prediction
+0      0.00       0.000000              0.000000    0.000000
+1      0.25       0.706682              0.352768    0.292105
+2      0.50       1.201535              0.620724    0.544054
+3      0.75       1.536754              0.820638    0.731434
+4      1.00       1.752462              0.966169    0.867464
+..      ...            ...                   ...         ...
+140   35.00       1.041488              0.713847    0.541778
+141   35.25       1.027340              0.701456    0.530135
+142   35.50       1.013735              0.689568    0.518943
+143   35.75       1.000628              0.678147    0.508174
+144   36.00       0.987977              0.667164    0.497800
+
+[145 rows x 4 columns]
+```
+
+Expected future endpoint output:
+
+```text
+{'future_auc': 20.598982740193605,
+ 'future_cmax': 1.437605857849121,
+ 'final_predose': 0.43403851985931396}
+```
+
 ### 7. Save and open the prediction figure
 
 ```python
@@ -221,6 +248,10 @@ os.startfile("my_prediction.svg")
 ```
 
 `os.startfile` is available on Windows. On macOS or Linux, leave Python with `exit()` and open the SVG using the system file browser.
+
+The resulting vector figure is shown below:
+
+![Pop-NCDE individualized prediction](docs/popncde_prediction.svg)
 
 ### 8. Save the fitted model
 
